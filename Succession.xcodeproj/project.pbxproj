@@ -12,6 +12,7 @@
 		156C63582219EB450027398D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156C63562219EB450027398D /* Main.storyboard */; };
 		156C635A2219EB470027398D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156C63592219EB470027398D /* Assets.xcassets */; };
 		156C635D2219EB470027398D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156C635B2219EB470027398D /* LaunchScreen.storyboard */; };
+		E4300143B3ADC922723AF041 /* Pods_Succession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EAACF7A10378810156F24E /* Pods_Succession.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,10 @@
 		156C63592219EB470027398D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		156C635C2219EB470027398D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		156C635E2219EB470027398D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		156C63652219F00D0027398D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		26EAACF7A10378810156F24E /* Pods_Succession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Succession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7A7FC49AAB24F41A6108CDA /* Pods-Succession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Succession.release.xcconfig"; path = "Pods/Target Support Files/Pods-Succession/Pods-Succession.release.xcconfig"; sourceTree = "<group>"; };
+		C91FDF1EE062DAFC311C0DE9 /* Pods-Succession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Succession.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Succession/Pods-Succession.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4300143B3ADC922723AF041 /* Pods_Succession.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +44,11 @@
 		156C63462219EB450027398D = {
 			isa = PBXGroup;
 			children = (
+				156C63652219F00D0027398D /* README.md */,
 				156C63512219EB450027398D /* Succession */,
 				156C63502219EB450027398D /* Products */,
+				BF1B9F4DFD8A27D63E554ABF /* Pods */,
+				6817B7BE944D04A7D20653A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +73,23 @@
 			path = Succession;
 			sourceTree = "<group>";
 		};
+		6817B7BE944D04A7D20653A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26EAACF7A10378810156F24E /* Pods_Succession.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF1B9F4DFD8A27D63E554ABF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C91FDF1EE062DAFC311C0DE9 /* Pods-Succession.debug.xcconfig */,
+				C7A7FC49AAB24F41A6108CDA /* Pods-Succession.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +97,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 156C63612219EB470027398D /* Build configuration list for PBXNativeTarget "Succession" */;
 			buildPhases = (
+				1B27991FAEE0A6E90EF7D3D5 /* [CP] Check Pods Manifest.lock */,
 				156C634B2219EB450027398D /* Sources */,
 				156C634C2219EB450027398D /* Frameworks */,
 				156C634D2219EB450027398D /* Resources */,
+				3C7AF58F6ED05D69C3D9F7DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +157,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B27991FAEE0A6E90EF7D3D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Succession-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C7AF58F6ED05D69C3D9F7DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Succession/Pods-Succession-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Succession/Pods-Succession-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		156C634B2219EB450027398D /* Sources */ = {
@@ -280,6 +351,7 @@
 		};
 		156C63622219EB470027398D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C91FDF1EE062DAFC311C0DE9 /* Pods-Succession.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -288,6 +360,16 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZaidPathan.Succession;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +380,7 @@
 		};
 		156C63632219EB470027398D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7A7FC49AAB24F41A6108CDA /* Pods-Succession.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +389,16 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ZaidPathan.Succession;
 				PRODUCT_NAME = "$(TARGET_NAME)";
