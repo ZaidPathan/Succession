@@ -7,4 +7,5 @@ target 'Succession' do
 
   # Pods for Succession
   pod 'FBSDKLoginKit'
+
 end

@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		156C63532219EB450027398D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C63522219EB450027398D /* AppDelegate.swift */; };
-		156C63552219EB450027398D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C63542219EB450027398D /* ViewController.swift */; };
-		156C63582219EB450027398D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156C63562219EB450027398D /* Main.storyboard */; };
 		156C635A2219EB470027398D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156C63592219EB470027398D /* Assets.xcassets */; };
 		156C635D2219EB470027398D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156C635B2219EB470027398D /* LaunchScreen.storyboard */; };
+		156C63712219F3EB0027398D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156C636F2219F3EA0027398D /* Main.storyboard */; };
+		156C63732219F4580027398D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C63722219F4580027398D /* LoginVC.swift */; };
+		156C63752219F6000027398D /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156C63742219F6000027398D /* LoginVM.swift */; };
 		E4300143B3ADC922723AF041 /* Pods_Succession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EAACF7A10378810156F24E /* Pods_Succession.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		156C634F2219EB450027398D /* Succession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Succession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		156C63522219EB450027398D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		156C63542219EB450027398D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		156C63572219EB450027398D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		156C63592219EB470027398D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		156C635C2219EB470027398D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		156C635E2219EB470027398D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		156C63652219F00D0027398D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		156C63702219F3EA0027398D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		156C63722219F4580027398D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		156C63742219F6000027398D /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		26EAACF7A10378810156F24E /* Pods_Succession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Succession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A7FC49AAB24F41A6108CDA /* Pods-Succession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Succession.release.xcconfig"; path = "Pods/Target Support Files/Pods-Succession/Pods-Succession.release.xcconfig"; sourceTree = "<group>"; };
 		C91FDF1EE062DAFC311C0DE9 /* Pods-Succession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Succession.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Succession/Pods-Succession.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,14 +65,55 @@
 		156C63512219EB450027398D /* Succession */ = {
 			isa = PBXGroup;
 			children = (
+				156C63692219F3930027398D /* Controller */,
+				156C63682219F3860027398D /* ViewModel */,
+				156C63672219F3790027398D /* View */,
+				156C63662219F36E0027398D /* Model */,
 				156C63522219EB450027398D /* AppDelegate.swift */,
-				156C63542219EB450027398D /* ViewController.swift */,
-				156C63562219EB450027398D /* Main.storyboard */,
 				156C63592219EB470027398D /* Assets.xcassets */,
 				156C635B2219EB470027398D /* LaunchScreen.storyboard */,
 				156C635E2219EB470027398D /* Info.plist */,
 			);
 			path = Succession;
+			sourceTree = "<group>";
+		};
+		156C63662219F36E0027398D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		156C63672219F3790027398D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				156C636A2219F3A50027398D /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		156C63682219F3860027398D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				156C63742219F6000027398D /* LoginVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		156C63692219F3930027398D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				156C63722219F4580027398D /* LoginVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		156C636A2219F3A50027398D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				156C636F2219F3EA0027398D /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		6817B7BE944D04A7D20653A9 /* Frameworks */ = {
@@ -150,9 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156C63712219F3EB0027398D /* Main.storyboard in Resources */,
 				156C635D2219EB470027398D /* LaunchScreen.storyboard in Resources */,
 				156C635A2219EB470027398D /* Assets.xcassets in Resources */,
-				156C63582219EB450027398D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,28 +249,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				156C63552219EB450027398D /* ViewController.swift in Sources */,
+				156C63752219F6000027398D /* LoginVM.swift in Sources */,
 				156C63532219EB450027398D /* AppDelegate.swift in Sources */,
+				156C63732219F4580027398D /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		156C63562219EB450027398D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				156C63572219EB450027398D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		156C635B2219EB470027398D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				156C635C2219EB470027398D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		156C636F2219F3EA0027398D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				156C63702219F3EA0027398D /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
